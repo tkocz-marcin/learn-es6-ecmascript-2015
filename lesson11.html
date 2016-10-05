@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Array</title>
+</head>
+<body>
+<ul>
+      <li class="product">15.99</li>
+      <li class="product">7.99</li>
+      <li class="product">32.99</li>
+      <li class="product">24.99</li>
+      <li class="product">5.99</li>
+    </ul>
+
+    <script>
+      const products = Array.from(document.querySelectorAll('.product'));
+
+  products
+    .filter(product => parseFloat(product.innerHTML) < 10)
+    .forEach(product => product.style.color = 'red');
+  products
+    .filter(product => parseFloat(product.innerHTML) > 10)
+    .forEach(product => product.style.color = 'blue');
+    </script>
+</body>
+</html>
